@@ -1,0 +1,500 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.6" pages="6">
+  <diagram id="App-architecture" name="Архитектура приложения">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- bot.py -->
+        <mxCell id="2" value="bot.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="100" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <!-- handlers/ -->
+        <mxCell id="3" value="handlers/" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="300" y="60" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="admin.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#d6b656;" parent="3" vertex="1">
+          <mxGeometry x="10" y="10" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="boss.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#d6b656;" parent="3" vertex="1">
+          <mxGeometry x="10" y="50" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="employee.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#d6b656;" parent="3" vertex="1">
+          <mxGeometry x="10" y="90" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="meetings.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#d6b656;" parent="3" vertex="1">
+          <mxGeometry x="10" y="130" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="registration.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#d6b656;" parent="3" vertex="1">
+          <mxGeometry x="10" y="170" width="90" height="30" as="geometry" />
+        </mxCell>
+        <!-- services/ -->
+        <mxCell id="9" value="services/" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="550" y="100" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="user_service.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#82b366;" parent="9" vertex="1">
+          <mxGeometry x="10" y="10" width="110" height="30" as="geometry" />
+        </mxCell>
+        <!-- database.py -->
+        <mxCell id="11" value="database.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="800" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <!-- keyboards.py -->
+        <mxCell id="12" value="keyboards.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="300" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <!-- states.py -->
+        <mxCell id="13" value="states.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="450" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <!-- reminder_scheduler.py -->
+        <mxCell id="14" value="reminder_scheduler.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="800" y="320" width="150" height="60" as="geometry" />
+        </mxCell>
+        <!-- config.py -->
+        <mxCell id="15" value="config.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#000;" parent="1" vertex="1">
+          <mxGeometry x="100" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <!-- Связи -->
+        <mxCell id="16" style="endArrow=block;html=1;strokeColor=#6c8ebf;" parent="1" source="2" target="3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" style="endArrow=block;html=1;strokeColor=#d6b656;" parent="1" source="3" target="9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" style="endArrow=block;html=1;strokeColor=#82b366;" parent="1" source="9" target="11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" style="endArrow=block;html=1;strokeColor=#d6b656;" parent="1" source="3" target="12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="20" style="endArrow=block;html=1;strokeColor=#d6b656;" parent="1" source="3" target="13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" style="endArrow=block;html=1;strokeColor=#666666;" parent="1" source="14" target="11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- config.py пунктиром -->
+        <mxCell id="22" style="endArrow=block;html=1;strokeColor=#000;dashed=1;" parent="1" source="15" target="2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" style="endArrow=block;html=1;strokeColor=#000;dashed=1;" parent="1" source="15" target="3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" style="endArrow=block;html=1;strokeColor=#000;dashed=1;" parent="1" source="15" target="9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25" style="endArrow=block;html=1;strokeColor=#000;dashed=1;" parent="1" source="15" target="11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="26" style="endArrow=block;html=1;strokeColor=#000;dashed=1;" parent="1" source="15" target="14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ui-contexts" name="Интерфейсные контексты и клавиатуры">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="1000" />
+        <mxCell id="1001" parent="1000" />
+        <!-- Главное меню -->
+        <mxCell id="1002" value="Главное меню&#xa;---------------------&#xa;Кнопки:&#xa;- Совещания&#xa;- Напоминания&#xa;- Заметки&#xa;- Профиль&#xa;- Регистрация&#xa;&#xa;Контекст:&#xa;- Главное меню пользователя&#xa;- Доступны переходы в другие разделы" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1001" vertex="1">
+          <mxGeometry x="700" y="100" width="220" height="170" as="geometry" />
+        </mxCell>
+        <!-- Меню совещаний -->
+        <mxCell id="1003" value="Меню совещаний&#xa;---------------------&#xa;Кнопки:&#xa;- Создать&#xa;- Список&#xa;- Назад&#xa;&#xa;Контекст:&#xa;- Просмотр и создание совещаний&#xa;- Переход к списку или созданию совещания, возврат в главное меню" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1001" vertex="1">
+          <mxGeometry x="400" y="350" width="220" height="150" as="geometry" />
+        </mxCell>
+        <!-- Меню напоминаний -->
+        <mxCell id="1004" value="Меню напоминаний&#xa;---------------------&#xa;Кнопки:&#xa;- Добавить&#xa;- Список&#xa;- Назад&#xa;&#xa;Контекст:&#xa;- Управление напоминаниями пользователя&#xa;- Добавление, просмотр, возврат в главное меню" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1001" vertex="1">
+          <mxGeometry x="700" y="350" width="220" height="150" as="geometry" />
+        </mxCell>
+        <!-- Меню заметок -->
+        <mxCell id="1005" value="Меню заметок&#xa;---------------------&#xa;Кнопки:&#xa;- Добавить&#xa;- Список&#xa;- Важные&#xa;- Выполненные&#xa;- Назад&#xa;&#xa;Контекст:&#xa;- Управление заметками пользователя&#xa;- Просмотр, добавление, фильтрация, возврат в главное меню" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1001" vertex="1">
+          <mxGeometry x="1000" y="350" width="240" height="170" as="geometry" />
+        </mxCell>
+        <!-- Меню профиля/настроек -->
+        <mxCell id="1006" value="Меню профиля&#xa;---------------------&#xa;Кнопки:&#xa;- Изменить ФИО&#xa;- Изменить отдел&#xa;- Назад&#xa;&#xa;Контекст:&#xa;- Просмотр и изменение профиля пользователя&#xa;- Возврат в главное меню" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1001" vertex="1">
+          <mxGeometry x="1300" y="350" width="220" height="140" as="geometry" />
+        </mxCell>
+        <!-- Меню регистрации -->
+        <mxCell id="1007" value="Меню регистрации&#xa;---------------------&#xa;Кнопки:&#xa;- Ввести ФИО&#xa;- Ввести отдел&#xa;- Завершить&#xa;&#xa;Контекст:&#xa;- Регистрация нового пользователя&#xa;- Ввод данных, завершение регистрации" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1001" vertex="1">
+          <mxGeometry x="100" y="350" width="220" height="140" as="geometry" />
+        </mxCell>
+        <!-- Меню выбора времени напоминания -->
+        <mxCell id="1008" value="Выбор времени напоминания&#xa;---------------------&#xa;Кнопки:&#xa;- 5 мин&#xa;- 10 мин&#xa;- 15 мин&#xa;- 30 мин&#xa;- Назад&#xa;&#xa;Контекст:&#xa;- Установка времени для напоминания&#xa;- Возврат в меню напоминаний" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1001" vertex="1">
+          <mxGeometry x="700" y="600" width="220" height="150" as="geometry" />
+        </mxCell>
+        <!-- Меню подтверждения/отмены действий -->
+        <mxCell id="1009" value="Подтверждение действия&#xa;---------------------&#xa;Кнопки:&#xa;- Подтвердить&#xa;- Отменить&#xa;&#xa;Контекст:&#xa;- Подтверждение или отмена действия" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1001" vertex="1">
+          <mxGeometry x="400" y="600" width="220" height="110" as="geometry" />
+        </mxCell>
+        <!-- Меню просмотра/редактирования заметки -->
+        <mxCell id="1010" value="Просмотр/редактирование заметки&#xa;---------------------&#xa;Кнопки:&#xa;- Редактировать&#xa;- Удалить&#xa;- Назад&#xa;&#xa;Контекст:&#xa;- Просмотр и редактирование выбранной заметки&#xa;- Возврат к списку заметок" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1001" vertex="1">
+          <mxGeometry x="1000" y="600" width="240" height="130" as="geometry" />
+        </mxCell>
+        <!-- Стрелки переходов -->
+        <mxCell id="1011" style="endArrow=block;html=1;strokeColor=#6c8ebf;" parent="1001" source="1002" target="1003" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1012" style="endArrow=block;html=1;strokeColor=#6c8ebf;" parent="1001" source="1002" target="1004" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1013" style="endArrow=block;html=1;strokeColor=#6c8ebf;" parent="1001" source="1002" target="1005" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1014" style="endArrow=block;html=1;strokeColor=#6c8ebf;" parent="1001" source="1002" target="1006" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1015" style="endArrow=block;html=1;strokeColor=#6c8ebf;" parent="1001" source="1002" target="1007" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1016" style="endArrow=block;html=1;strokeColor=#d6b656;" parent="1001" source="1004" target="1008" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1017" style="endArrow=block;html=1;strokeColor=#d6b656;" parent="1001" source="1005" target="1010" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1018" style="endArrow=block;html=1;strokeColor=#d6b656;" parent="1001" source="1003" target="1009" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1019" style="endArrow=block;html=1;strokeColor=#d6b656;" parent="1001" source="1005" target="1009" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="fsm-contexts" name="Меню и FSMContext">
+    <mxGraphModel dx="2977" dy="2872" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2047" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2003" target="2011">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2063" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2003" target="2021">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2003" value="РЕГИСТРАЦИЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести ФИО&#xa;- Ввести отдел&#xa;- Ввести должность&#xa;- Ввести телефон&#xa;- Завершить&#xa;&#xa;Состояния (контекст):&#xa;- Ввод телефона&#xa;- Ввод ФИО&#xa;- Ввод отдела&#xa;- Ввод должности" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="1310" y="-270" width="260" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="2004" value="ПРОФИЛЬ&#xa;---------------------&#xa;Пункты меню:&#xa;- Изменить ФИО&#xa;- Изменить отдел&#xa;- Изменить должность&#xa;- Изменить телефон&#xa;- Назад&#xa;&#xa;Состояния (контекст):&#xa;- Выбор отдела&#xa;- Выбор роли&#xa;- Выбор пользователя&#xa;- Просмотр пользователя&#xa;- Редактирование поля&#xa;- Редактирование ФИО&#xa;- Редактирование роли&#xa;- Редактирование отдела&#xa;- Редактирование должности" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="520" y="800" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2041" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2011" target="2012">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2042" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2011" target="2013">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2043" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2011" target="2014">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="390" />
+              <mxPoint x="820" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2011" value="МЕНЮ АДМИНИСТРАТОРА&#xa;---------------------&#xa;Пункты меню:&#xa;- Добавить пользователя&#xa;- Редактировать пользователя&#xa;- Удалить пользователя&#xa;- Сменить роль пользователя&#xa;&#xa;Состояния (контекст):&#xa;- Ожидание выбора действия" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="340" y="160" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="2012" value="ДОБАВЛЕНИЕ ПОЛЬЗОВАТЕЛЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести ФИО&#xa;- Выбрать отдел&#xa;- Выбрать роль&#xa;- Ввести должность&#xa;- Ввести телефон&#xa;&#xa;Состояния (контекст):&#xa;- Ввод ФИО&#xa;- Выбор отдела&#xa;- Выбор роли&#xa;- Ввод должности&#xa;- Ввод телефона" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="20" y="470" width="260" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2044" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2013" target="2004">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2046" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2013" target="2015">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2013" value="РЕДАКТИРОВАНИЕ ПОЛЬЗОВАТЕЛЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Выбрать отдел&#xa;- Выбрать роль&#xa;- Выбрать пользователя&#xa;- Редактировать ФИО&#xa;- Редактировать роль&#xa;- Редактировать отдел&#xa;- Редактировать должность&#xa;&#xa;Состояния (контекст):&#xa;- Выбор отдела&#xa;- Выбор роли&#xa;- Выбор пользователя&#xa;- Просмотр пользователя&#xa;- Редактирование ФИО&#xa;- Редактирование роли&#xa;- Редактирование отдела&#xa;- Редактирование должности" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="320" y="455" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="2014" value="УДАЛЕНИЕ ПОЛЬЗОВАТЕЛЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Выбрать отдел&#xa;- Выбрать роль&#xa;- Выбрать пользователя&#xa;- Подтвердить удаление&#xa;&#xa;Состояния (контекст):&#xa;- Выбор отдела&#xa;- Выбор роли&#xa;- Выбор пользователя&#xa;- Подтверждение удаления" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="690" y="490" width="260" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="2015" value="СМЕНА РОЛИ ПОЛЬЗОВАТЕЛЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Выбрать пользователя&#xa;- Назначить роль&#xa;&#xa;Состояния (контекст):&#xa;- Выбор пользователя&#xa;- Назначение роли" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="153" y="800" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2048" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2021" target="2022">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2049" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2021" target="2023">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2050" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2021" target="2028">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2021" value="МЕНЮ НАЧАЛЬНИКА&lt;br&gt;---------------------&lt;br&gt;Пункты меню:&lt;br&gt;- Создать совещание&lt;br&gt;- Мои совещания (я организатор)&lt;br&gt;- Ответить на вопрос сотрудника&lt;br&gt;&lt;br&gt;Состояния (контекст):&lt;br&gt;- Ожидание выбора действия" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="1310" y="160" width="300" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="2022" value="СОЗДАНИЕ СОВЕЩАНИЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести тему&#xa;- Ввести дату и время&#xa;- Ввести длительность&#xa;- Выбрать участников&#xa;- Подтвердить создание&#xa;&#xa;Состояния (контекст):&#xa;- Ввод темы совещания&#xa;- Ввод даты и времени&#xa;- Ввод длительности&#xa;- Выбор участников&#xa;- Подтверждение создания" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="980" y="490" width="300" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2051" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2023" target="2025">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1460" y="758" />
+              <mxPoint x="1080" y="758" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2052" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2023" target="2026">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1460" y="760" />
+              <mxPoint x="1330" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2055" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2023" target="2027">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1460" y="758" />
+              <mxPoint x="1580" y="758" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2056" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2023" target="2024">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1460" y="760" />
+              <mxPoint x="1860" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2023" value="МОИ СОВЕЩАНИЯ (Я ОРГАНИЗАТОР)&lt;br&gt;---------------------&lt;br&gt;Пункты меню:&lt;br&gt;- Добавить заметку&lt;br&gt;- Добавить напоминание&lt;br&gt;- Редактировать&lt;br&gt;- Удалить&lt;br&gt;&lt;br&gt;Состояния (контекст):&lt;br&gt;- Просмотр совещания&lt;br&gt;- Добавление заметки&lt;br&gt;- Добавление напоминания&lt;br&gt;- Редактирование&lt;br&gt;- Удаление" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="1310" y="485" width="300" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="2024" value="РЕДАКТИРОВАНИЕ СОВЕЩАНИЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Изменить тему&#xa;- Изменить дату/время&#xa;- Изменить участников&#xa;&#xa;Состояния (контекст):&#xa;- Выбор поля для редактирования&#xa;- Ввод новой темы&#xa;- Ввод новой даты/времени&#xa;- Выбор новых участников" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="1710" y="785" width="300" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="2025" value="ДОБАВЛЕНИЕ ЗАМЕТКИ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести текст заметки&#xa;&#xa;Состояния (контекст):&#xa;- Ввод заметки" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="970" y="790" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="2026" value="ДОБАВЛЕНИЕ НАПОМИНАНИЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести время напоминания&#xa;&#xa;Состояния (контекст):&#xa;- Ввод времени напоминания" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="1220" y="790" width="220" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="2027" value="УДАЛЕНИЕ СОВЕЩАНИЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Подтвердить удаление&#xa;- Отмена&#xa;&#xa;Состояния (контекст):&#xa;- Подтверждение удаления" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="1470" y="790" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="2028" value="ОТВЕТ НА ВОПРОС СОТРУДНИКА&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести ответ&#xa;&#xa;Состояния (контекст):&#xa;- Ожидание ответа начальника" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="1640" y="490" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2057" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2031" target="2032">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2058" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2031" target="2034">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2059" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2031" target="2035">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2031" value="МЕНЮ РАБОТНИКА&lt;br&gt;---------------------&lt;br&gt;Пункты меню:&lt;br&gt;- Мои приглашения&lt;br&gt;- Мои совещания (я участник)&lt;br&gt;- Задать вопрос начальнику&lt;br&gt;&lt;br&gt;Состояния (контекст):&lt;br&gt;- Ожидание выбора действия" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="2170" y="185" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2060" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2032" target="2040">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2032" value="МОИ ПРИГЛАШЕНИЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Принять приглашение&#xa;- Отклонить приглашение&#xa;&#xa;Состояния (контекст):&#xa;- Просмотр приглашений&#xa;- Ожидание причины отказа" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1890" y="475" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2061" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2034" target="2037">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2062" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2034" target="2038">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2034" value="МОИ СОВЕЩАНИЯ (Я УЧАСТНИК)&#xa;---------------------&#xa;Пункты меню:&#xa;- Просмотр совещания&#xa;- Добавить заметку&#xa;- Добавить напоминание&#xa;&#xa;Состояния (контекст):&#xa;- Просмотр совещания&#xa;- Ввод заметки&#xa;- Ввод времени напоминания для совещания" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="2181" y="475" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="2035" value="ЗАДАТЬ ВОПРОС НАЧАЛЬНИКУ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести вопрос&#xa;&#xa;Состояния (контекст):&#xa;- Ожидание вопроса сотрудника" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="2530" y="475" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="2037" value="УСТАНОВИТЬ НАПОМИНАНИЕ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести время напоминания&#xa;&#xa;Состояния (контекст):&#xa;- Ввод времени напоминания" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="2110" y="785" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="2038" value="ДОБАВИТЬ ЗАМЕТКУ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести текст заметки&#xa;&#xa;Состояния (контекст):&#xa;- Ввод заметки" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="2360" y="785" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="2040" value="ОТКЛОНИТЬ ПРИГЛАШЕНИЕ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести причину отказа&#xa;&#xa;Состояния (контекст):&#xa;- Ожидание причины отказа" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1910" y="655" width="220" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eXIy9xOgoDt2ufUtmhUS-2064" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.563;entryY=-0.008;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2003" target="2031">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1440" y="40" />
+              <mxPoint x="2339" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="pLemT8p9eOLMNu6YrA4L" name="Страница — 4">
+    <mxGraphModel dx="1737" dy="993" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Bh8tdYidlMsl6SuD9kfB-1" value="ПРОФИЛЬ&#xa;---------------------&#xa;Пункты меню:&#xa;- Изменить ФИО&#xa;- Изменить отдел&#xa;- Изменить должность&#xa;- Изменить телефон&#xa;- Назад&#xa;&#xa;Состояния (контекст):&#xa;- Выбор отдела&#xa;- Выбор роли&#xa;- Выбор пользователя&#xa;- Просмотр пользователя&#xa;- Редактирование поля&#xa;- Редактирование ФИО&#xa;- Редактирование роли&#xa;- Редактирование отдела&#xa;- Редактирование должности" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="840" y="820" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Bh8tdYidlMsl6SuD9kfB-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Bh8tdYidlMsl6SuD9kfB-5" target="Bh8tdYidlMsl6SuD9kfB-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Bh8tdYidlMsl6SuD9kfB-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Bh8tdYidlMsl6SuD9kfB-5" target="Bh8tdYidlMsl6SuD9kfB-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Bh8tdYidlMsl6SuD9kfB-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Bh8tdYidlMsl6SuD9kfB-5" target="Bh8tdYidlMsl6SuD9kfB-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="410" />
+              <mxPoint x="1140" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bh8tdYidlMsl6SuD9kfB-5" value="МЕНЮ АДМИНИСТРАТОРА&#xa;---------------------&#xa;Пункты меню:&#xa;- Добавить пользователя&#xa;- Редактировать пользователя&#xa;- Удалить пользователя&#xa;- Сменить роль пользователя&#xa;&#xa;Состояния (контекст):&#xa;- Ожидание выбора действия" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="660" y="180" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Bh8tdYidlMsl6SuD9kfB-6" value="ДОБАВЛЕНИЕ ПОЛЬЗОВАТЕЛЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести ФИО&#xa;- Выбрать отдел&#xa;- Выбрать роль&#xa;- Ввести должность&#xa;- Ввести телефон&#xa;&#xa;Состояния (контекст):&#xa;- Ввод ФИО&#xa;- Выбор отдела&#xa;- Выбор роли&#xa;- Ввод должности&#xa;- Ввод телефона" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="340" y="490" width="260" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Bh8tdYidlMsl6SuD9kfB-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Bh8tdYidlMsl6SuD9kfB-9" target="Bh8tdYidlMsl6SuD9kfB-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Bh8tdYidlMsl6SuD9kfB-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Bh8tdYidlMsl6SuD9kfB-9" target="Bh8tdYidlMsl6SuD9kfB-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Bh8tdYidlMsl6SuD9kfB-9" value="РЕДАКТИРОВАНИЕ ПОЛЬЗОВАТЕЛЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Выбрать отдел&#xa;- Выбрать роль&#xa;- Выбрать пользователя&#xa;- Редактировать ФИО&#xa;- Редактировать роль&#xa;- Редактировать отдел&#xa;- Редактировать должность&#xa;&#xa;Состояния (контекст):&#xa;- Выбор отдела&#xa;- Выбор роли&#xa;- Выбор пользователя&#xa;- Просмотр пользователя&#xa;- Редактирование ФИО&#xa;- Редактирование роли&#xa;- Редактирование отдела&#xa;- Редактирование должности" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="640" y="475" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Bh8tdYidlMsl6SuD9kfB-10" value="УДАЛЕНИЕ ПОЛЬЗОВАТЕЛЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Выбрать отдел&#xa;- Выбрать роль&#xa;- Выбрать пользователя&#xa;- Подтвердить удаление&#xa;&#xa;Состояния (контекст):&#xa;- Выбор отдела&#xa;- Выбор роли&#xa;- Выбор пользователя&#xa;- Подтверждение удаления" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="510" width="260" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="Bh8tdYidlMsl6SuD9kfB-11" value="СМЕНА РОЛИ ПОЛЬЗОВАТЕЛЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Выбрать пользователя&#xa;- Назначить роль&#xa;&#xa;Состояния (контекст):&#xa;- Выбор пользователя&#xa;- Назначение роли" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="473" y="820" width="260" height="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="zwfxoyAvxG7WDLJRVmkM" name="Страница — 5">
+    <mxGraphModel dx="1042" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="z8jhqzs8MNHGkNC8YlXT-4" target="z8jhqzs8MNHGkNC8YlXT-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="z8jhqzs8MNHGkNC8YlXT-4" target="z8jhqzs8MNHGkNC8YlXT-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="z8jhqzs8MNHGkNC8YlXT-4" target="z8jhqzs8MNHGkNC8YlXT-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-4" value="МЕНЮ НАЧАЛЬНИКА&lt;br&gt;---------------------&lt;br&gt;Пункты меню:&lt;br&gt;- Создать совещание&lt;br&gt;- Мои совещания (я организатор)&lt;br&gt;- Ответить на вопрос сотрудника&lt;br&gt;&lt;br&gt;Состояния (контекст):&lt;br&gt;- Ожидание выбора действия" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="550" y="320" width="300" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-5" value="СОЗДАНИЕ СОВЕЩАНИЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести тему&#xa;- Ввести дату и время&#xa;- Ввести длительность&#xa;- Выбрать участников&#xa;- Подтвердить создание&#xa;&#xa;Состояния (контекст):&#xa;- Ввод темы совещания&#xa;- Ввод даты и времени&#xa;- Ввод длительности&#xa;- Выбор участников&#xa;- Подтверждение создания" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="220" y="650" width="300" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="z8jhqzs8MNHGkNC8YlXT-10" target="z8jhqzs8MNHGkNC8YlXT-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="918" />
+              <mxPoint x="320" y="918" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="z8jhqzs8MNHGkNC8YlXT-10" target="z8jhqzs8MNHGkNC8YlXT-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="920" />
+              <mxPoint x="570" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="z8jhqzs8MNHGkNC8YlXT-10" target="z8jhqzs8MNHGkNC8YlXT-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="918" />
+              <mxPoint x="820" y="918" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="z8jhqzs8MNHGkNC8YlXT-10" target="z8jhqzs8MNHGkNC8YlXT-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="920" />
+              <mxPoint x="1100" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-10" value="МОИ СОВЕЩАНИЯ (Я ОРГАНИЗАТОР)&lt;br&gt;---------------------&lt;br&gt;Пункты меню:&lt;br&gt;- Добавить заметку&lt;br&gt;- Добавить напоминание&lt;br&gt;- Редактировать&lt;br&gt;- Удалить&lt;br&gt;&lt;br&gt;Состояния (контекст):&lt;br&gt;- Просмотр совещания&lt;br&gt;- Добавление заметки&lt;br&gt;- Добавление напоминания&lt;br&gt;- Редактирование&lt;br&gt;- Удаление" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="550" y="645" width="300" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-11" value="РЕДАКТИРОВАНИЕ СОВЕЩАНИЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Изменить тему&#xa;- Изменить дату/время&#xa;- Изменить участников&#xa;&#xa;Состояния (контекст):&#xa;- Выбор поля для редактирования&#xa;- Ввод новой темы&#xa;- Ввод новой даты/времени&#xa;- Выбор новых участников" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="950" y="945" width="300" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-12" value="ДОБАВЛЕНИЕ ЗАМЕТКИ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести текст заметки&#xa;&#xa;Состояния (контекст):&#xa;- Ввод заметки" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="210" y="950" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-13" value="ДОБАВЛЕНИЕ НАПОМИНАНИЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести время напоминания&#xa;&#xa;Состояния (контекст):&#xa;- Ввод времени напоминания" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="460" y="950" width="220" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-14" value="УДАЛЕНИЕ СОВЕЩАНИЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Подтвердить удаление&#xa;- Отмена&#xa;&#xa;Состояния (контекст):&#xa;- Подтверждение удаления" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="710" y="950" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="z8jhqzs8MNHGkNC8YlXT-15" value="ОТВЕТ НА ВОПРОС СОТРУДНИКА&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести ответ&#xa;&#xa;Состояния (контекст):&#xa;- Ожидание ответа начальника" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="880" y="650" width="220" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="8bacjzR-EX4MedwxNKYK" name="Страница — 6">
+    <mxGraphModel dx="1042" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ge94cyqj-yNJx8GP79Xt-4" target="Ge94cyqj-yNJx8GP79Xt-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ge94cyqj-yNJx8GP79Xt-4" target="Ge94cyqj-yNJx8GP79Xt-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ge94cyqj-yNJx8GP79Xt-4" target="Ge94cyqj-yNJx8GP79Xt-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-4" value="МЕНЮ РАБОТНИКА&lt;br&gt;---------------------&lt;br&gt;Пункты меню:&lt;br&gt;- Мои приглашения&lt;br&gt;- Мои совещания (я участник)&lt;br&gt;- Задать вопрос начальнику&lt;br&gt;&lt;br&gt;Состояния (контекст):&lt;br&gt;- Ожидание выбора действия" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="480" y="410" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ge94cyqj-yNJx8GP79Xt-6" target="Ge94cyqj-yNJx8GP79Xt-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-6" value="МОИ ПРИГЛАШЕНИЯ&#xa;---------------------&#xa;Пункты меню:&#xa;- Принять приглашение&#xa;- Отклонить приглашение&#xa;&#xa;Состояния (контекст):&#xa;- Просмотр приглашений&#xa;- Ожидание причины отказа" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="200" y="700" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ge94cyqj-yNJx8GP79Xt-9" target="Ge94cyqj-yNJx8GP79Xt-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ge94cyqj-yNJx8GP79Xt-9" target="Ge94cyqj-yNJx8GP79Xt-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-9" value="МОИ СОВЕЩАНИЯ (Я УЧАСТНИК)&#xa;---------------------&#xa;Пункты меню:&#xa;- Просмотр совещания&#xa;- Добавить заметку&#xa;- Добавить напоминание&#xa;&#xa;Состояния (контекст):&#xa;- Просмотр совещания&#xa;- Ввод заметки&#xa;- Ввод времени напоминания для совещания" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="491" y="700" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-10" value="ЗАДАТЬ ВОПРОС НАЧАЛЬНИКУ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести вопрос&#xa;&#xa;Состояния (контекст):&#xa;- Ожидание вопроса сотрудника" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="840" y="700" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-11" value="УСТАНОВИТЬ НАПОМИНАНИЕ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести время напоминания&#xa;&#xa;Состояния (контекст):&#xa;- Ввод времени напоминания" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="420" y="1010" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-12" value="ДОБАВИТЬ ЗАМЕТКУ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести текст заметки&#xa;&#xa;Состояния (контекст):&#xa;- Ввод заметки" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="670" y="1010" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Ge94cyqj-yNJx8GP79Xt-13" value="ОТКЛОНИТЬ ПРИГЛАШЕНИЕ&#xa;---------------------&#xa;Пункты меню:&#xa;- Ввести причину отказа&#xa;&#xa;Состояния (контекст):&#xa;- Ожидание причины отказа" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="220" y="880" width="220" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
